@@ -62,4 +62,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+
+    //relacion uno a muchos inversa
+    public function datos(){
+        return $this->belongsTo(Dato::class);
+    }
 }
